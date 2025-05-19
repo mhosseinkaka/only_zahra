@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطا</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .error-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .home-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 style="color: #dc3545;">متاسفیم، خطایی رخ داده است!</h1>
+        <p class="error-message">{{ error }}</p>
+        <p><a href="/" class="home-link">بازگشت به صفحه اصلی</a></p>
+    </div>
+</body>
+</html>
