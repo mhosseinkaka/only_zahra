@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سخن دوست</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            line-height: 1.8;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .poem-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        .poem-line {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .poet-info {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 20px;
+        }
+        .poet-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .poet-link:hover {
+            text-decoration: underline;
+        }
+        .poem-id-info {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poem-container">
+        <div class="poem-line">{{ m1 }}</div>
+        <div class="poem-line">{{ m2 }}</div>
+        <div class="poet-info">
+            شاعر: <a href="{{ url }}" class="poet-link" target="_blank">{{ poet }}</a>
+        </div>
+        {% if poem_id_requested %}
+            <div class="poem-id-info">
+                (شناسه شعر درخواستی: {{ poem_id_requested }})
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
